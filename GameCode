@@ -1,0 +1,36 @@
+import random
+
+#Computer choices 
+gameItems = ['rock','paper','scissors']
+
+#Randomize the choice for the computer
+gameChoice = random.choice(gameItems)
+
+#Takee user input as a guess and assign it to variable 
+userInput = input("rock, paper, or scissors: ")
+
+#Logic if the computer wins
+if ((gameChoice == "rock") and (userInput == "scissors")):
+    print("The Computer Wins! It Beat you :(!")
+elif ((gameChoice == "paper") and (userInput == "rock")):
+    print("The Computer Wins! It Beat you :(!")
+elif ((gameChoice == "scissors") and (userInput == "paper")):
+    print("The Computer Wins! It Beat you :(!")
+    
+#Logic if user wins    
+elif ((gameChoice == "rock") and (userInput == "paper")):
+    print("You Win! You beat the computer! :D ")
+elif ((gameChoice == "paper") and (userInput == "scissors")):
+    print("You Win! You beat the computer! :D ")
+elif ((gameChoice == "scissors") and (userInput == "rock")):
+    print("You Win! You beat the computer! :D ")
+    
+#Logic if both answers are the same
+if userInput == gameChoice:
+    print("You and the computer tied! What a match!")
+      
+#Output the answers for both comp and user  
+compChoice = f'the computers choice was {gameChoice}'
+userChoice = f'And your choice was {userInput}'
+print(compChoice)
+print(userChoice)
